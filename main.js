@@ -25,6 +25,7 @@ fetch('https://gist.githubusercontent.com/drewtrobinson/2bcae79d252cf96807aab488
                     for (let i=0; i<people.tags.length; i++){
                         newBody.innerHTML += '<btn>' + people.tags[i] + '</btn>';
                     }
+                    newBody.innerHTML += '<span contenteditable></span>';
                     list.appendChild(newCard);
                 } else {
                     staffed.splice(staffed.indexOf(card), 1);

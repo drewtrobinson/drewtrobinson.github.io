@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Planning Tool</title>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="user-card-container noprint" user-card-container></div>
+  <template user-card-template>
+    <div class="card" user-card-main>
+      <div class="header" user-card-header></div>
+      <div class="body" user-card-body></div>
+    </div>
+  </template>
+  <template list-card>
+    <tr list-row>
+      <td list-header style="width:25%;"></td>
+      <td class="listTask" list-body style="width:75%;"></td>
+    </tr>
+  </template>
+  <table id="list" list-container>
+
+  </table>
+  <script src="main.js"></script>
+</body>
+</html>

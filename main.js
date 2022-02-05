@@ -4,7 +4,7 @@ const listCard = document.querySelector('[list-card]');
 const list = document.getElementById('list');
 let staffed = [];
 
-fetch('https://gist.githubusercontent.com/drewtrobinson/2bcae79d252cf96807aab4880f4044ec/raw/e7a502bfdd222930887728de6ea9eed4080b036d/people.json')
+fetch('people.json')
     .then(res => res.json())
     .then(data => {
         data.forEach(people => {

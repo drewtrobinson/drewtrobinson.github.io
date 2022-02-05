@@ -1,0 +1,199 @@
+[
+    {
+        "name": "Anthony",
+        "tags": [
+            "thrower",
+            "right",
+            "left",
+            "floater",
+            "vizpick",
+            "downstack",
+            "consumables",
+            "grocery"
+        ]
+    },
+    {
+        "name": "Christopher",
+        "tags": [
+            "right",
+            "left",
+            "floater",
+            "vizpick",
+            "consumables",
+            "grocery"
+        ]
+    },{
+        "name": "Cole",
+        "tags": [
+            "thrower",
+            "right",
+            "left",
+            "floater",
+            "vizpick",
+            "downstack",
+            "consumables",
+            "grocery",
+            "breakpacks"
+        ]
+    },{
+        "name": "Devon",
+        "tags": [
+            "thrower",
+            "left",
+            "right",
+            "floater",
+            "vizpick",
+            "consumables",
+            "grocery"
+        ]
+    },{
+        "name": "Michael",
+        "tags": [
+            "thrower",
+            "right",
+            "left",
+            "floater",
+            "consumables",
+            "grocery"
+        ]
+    },{
+        "name": "Alphonse",
+        "tags": [
+            "thrower",
+            "left",
+            "floater",
+            "vizpick",
+            "consumables",
+            "grocery"
+        ]
+    },{
+        "name": "Timbaland",
+        "tags": [
+            "right",
+            "left",
+            "floater",
+            "vizpick",
+            "consumables",
+            "grocery"
+        ]
+    },{
+        "name": "Parrish",
+        "tags": [
+            "thrower",
+            "right",
+            "left",
+            "floater",
+            "vizpick",
+            "consumables",
+            "grocery"
+        ]
+    },{
+        "name": "Patrick",
+        "tags": [
+            "vizpick",
+            "downstack",
+            "grocery",
+            "4-5"
+        ]
+    },{
+        "name": "Gene",
+        "tags": [
+            "vizpick",
+            "downstack",
+            "grocery",
+            "14-15"
+        ]
+    },{
+        "name": "Jimmy",
+        "tags": [
+            "downstack",
+            "grocery",
+            "6-7"
+        ]
+    },{
+        "name": "Raul",
+        "tags": [
+            "downstack",
+            "grocery",
+            "4-5"
+        ]
+    },{
+        "name": "Alexis",
+        "tags": [
+            "floater",
+            "downstack",
+            "grocery",
+            "6-7",
+            "2-3"
+        ]
+    },{
+        "name": "Sharon",
+        "tags": [
+            "breakpacks",
+            "grocery",
+            "2-3",
+            "8-9-10"
+        ]
+    },{
+        "name": "Charlotte",
+        "tags": [
+            "breakpacks",
+            "grocery",
+            "2-3",
+            "8-9-10"
+        ]
+    },{
+        "name": "Nick",
+        "tags": [
+            "right",
+            "left",
+            "floater",
+            "vizpick",
+            "consumables",
+            "grocery"
+        ]
+    },{
+        "name": "Donrico",
+        "tags": [
+            "right",
+            "left",
+            "floater",
+            "downstack",
+            "consumables",
+            "grocery"
+        ]
+    },{
+        "name": "Jonathon",
+        "tags": [
+            "left",
+            "floater",
+            "downstack",
+            "consumables",
+            "grocery"
+        ]
+    },{
+        "name": "Dorian",
+        "tags": [
+            "left",
+            "floater",
+            "consumables",
+            "grocery"
+        ]
+    },{
+        "name": "Austin",
+        "tags": [
+            "right",
+            "downstack",
+            "grocery"
+        ]
+    },{
+        "name": "Hunter",
+        "tags": [
+            "right",
+            "left",
+            "floater",
+            "consumables",
+            "grocery"
+        ]
+    }
+]

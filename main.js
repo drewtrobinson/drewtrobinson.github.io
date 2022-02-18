@@ -11,7 +11,9 @@ fetch('people.json').then(res => res.json()).then(data => {
 });
 
 function createPeopleCard(obj){
-    let node = document.querySelector('[people-card-template]').content.cloneNode(true).children[0];
+    //let node = document.querySelector('[people-card-template]').content.cloneNode(true).children[0];
+    let node = document.createElement('div');
+    node.classList.add('people-card', 'hide');
     node.innerText = obj.name;
 
     node.addEventListener('click', e => {

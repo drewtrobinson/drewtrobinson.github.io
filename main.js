@@ -1,46 +1,68 @@
-const userCardTemplate = document.querySelector('[user-card-template]');
-const userCardContainer = document.querySelector('[user-card-container]');
-const listCard = document.querySelector('[list-card]');
-const list = document.getElementById('list');
-let staffed = [];
+let team = [];
+let staff = [];
+const people_container = document.querySelector('[people-container]');
+const people_list = document.querySelector('[people-list]');
 
-fetch('people.json')
-    .then(res => res.json())
-    .then(data => {
-        data.forEach(people => {
-            const card = userCardTemplate.content.cloneNode(true).children[0];
-            const header = card.querySelector('[user-card-header');
-            card.addEventListener('click', e => {
-                const hideClass = card.classList.contains('selected');
-                card.classList.toggle('selected', !hideClass);
-                if (!hideClass){
-                    staffed.push(card);
-                    const newCard = listCard.content.cloneNode(true).children[0];
-                    newCard.setAttribute('id', card.querySelector('[user-card-header]').textContent);
-                    const newHeader = newCard.querySelector('[list-header]');
-                    newHeader.setAttribute('class', 'li');
-                    const newBody = newCard.querySelector('[list-body]');
-                    newBody.setAttribute('class', 'li');
-                    newHeader.textContent = card.querySelector('[user-card-header]').textContent;
-                    for (let i=0; i<people.tags.length; i++){
-                        newBody.innerHTML += '<btn>' + people.tags[i] + '</btn>';
-                    }
-                    newBody.innerHTML += '<span contenteditable></span>';
-                    list.appendChild(newCard);
-                } else {
-                    staffed.splice(staffed.indexOf(card), 1);
-                    list.removeChild(document.getElementById(card.querySelector('[user-card-header]').textContent));
+fetch('people.json').then(res => res.json()).then(data => {
+    data.forEach(people => {
+        staff.push(people);
+        createPeopleCard(people);
+    });
+});
+
+function createPeopleCard(obj){
+    let node = document.querySelector('[people-card-template]').content.cloneNode(true).children[0];
+    node.innerText = obj.name;
+
+    node.addEventListener('click', e => {
+        e.target.classList.toggle('select');
+        loop(obj);
+    });
+
+    people_container.appendChild(node);
+}
+
+function loop(obj){
+    plist = people_list;
+    for (let i=0; i<people_container.children.length; i++){
+        let inst = people_container.children[i];
+        if (inst.classList.contains('select')){
+            if (document.getElementById(inst.innerText) == null){
+                let node = document.createElement('li');
+                node.id = inst.innerText;
+                node.innerText = inst.innerText;
+
+                plist.appendChild(node);
+
+                for (let j=0; j<obj.tags.length; j++){
+                    btn = document.createElement('btn');
+                    btn.innerText = obj.tags[j];
+                    btn.addEventListener('click', e => {
+                        e.target.classList.toggle('select');
+                        console.log(e.target);
+                        
+                    });
+                    node.appendChild(btn);
                 }
-            });
-            header.textContent = people.name;
-            userCardContainer.append(card);
-        })
-    });
+                btn = document.createElement('btn');
+                btn.contentEditable = true;
+                btn.addEventListener('keyup', e => {
+                    if (btn.innerText != ''){
+                        btn.classList.add('select');
+                    } else {
+                        btn.classList.remove('select');
+                    }
+                });
+                node.appendChild(btn);
+                
 
-    document.addEventListener('click', e => {
-        if (e.target.tagName == 'BTN'){
-            console.log('btn');
-            const selClass = e.target.classList.contains('selected');
-            e.target.classList.toggle('selected', !selClass);
+                team.push(inst.innerText);
+            }
+        } else {
+            if (document.getElementById(inst.innerText) != null){
+                team.splice(team.indexOf(inst.innerText), 1);
+                document.getElementById(inst.innerText).remove();
+            }
         }
-    });
+    }
+}

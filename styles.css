@@ -1,87 +1,100 @@
+:root {
+    --bg-color: rgb(54, 52, 73);
+    --card-bg-color: rgb(80, 78, 102);
+    --text-color: #fafafa;
+    --card-text-color: #e7e7e7;
+}
+
 html, body {
-    background-color: rgb(46, 46, 46);
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    width: 100%;
+    height: 100%;
 }
 
-.user-card-container {
+.body {
+    width: 100%;
+    height: 100%;
+}
+
+.people-container {
+    width: 1fr;
+    background-color: var(--bg-color);
+    margin: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
     gap: .25rem;
-    margin-top: 1rem;
 }
 
-.card {
-    border: 1px solid black;
-    background-color: rgb(156, 156, 156);
+.people-card {
+    background-color: var(--card-bg-color);
+    height: 3rem;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--card-text-color);
+}
+
+.people-card:hover {
+    cursor: pointer;
+    background-color: rgb(100, 97, 128);
+}
+
+.people-card.select {
+    background-color: rgb(141, 137, 180);
+};
+
+ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+    width: 90%;
+    border: 1px black solid;
+    background-color: var(--card-bg-color);
     padding: .5rem;
 }
 
-.card.selected {
-    background-color: rgb(125, 184, 145);
-}
+@media print{
+    .hide {
+        visibility: hidden;
+        display: none;
+    }
 
-btn.selected {
-    background-color: rgb(125, 184, 145);
-}
-
-.card > .header {
-    margin-bottom: .25rem;
-}
-
-.card > .body {
-    font-size: .8rem;
-}
-
-span {
-    margin-right: .5rem;
-    padding: .25rem;
-    background-color: white;
-    color: black;
-}
-
-@media print {
-    .noprint {
-       display: none;
+    li {
+        color: black;
     }
 
     btn {
         display: none;
+        
     }
 
-    btn.selected {
+    btn.select {
         display: initial;
-    }
-
-    li, .li {
         background-color: white;
     }
-
-    .input {
-        border: 0px;
-    }
-}
-
-li, .li {
-    text-decoration: none;
-    list-style: none;
-    width: 150px;
-    color: black;
-    border: 1px black solid;
-    padding: .5rem;
-}
-
-td, tr, table {
-    margin: 0px;
-    border-spacing: 0px;
-}
-
-table {
-    width: 100%;
-    margin-top: 1rem;
 }
 
 btn {
-    margin-right: .5rem;
+    margin-left: .25rem;
     padding: .25rem;
-    background-color: white;
-    color: black;
+    color: --card-text-color;
+    background-color: var(--bg-color);
+}
+
+btn:hover {
+    cursor: pointer;
+    background-color: rgb(100, 97, 128);
+}
+
+btn.select {
+    background-color: rgb(141, 137, 180);
 }

@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Planning Tool</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lineup</title>
+    <script src="main.js" defer></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="user-card-container noprint" user-card-container></div>
-  <template user-card-template>
-    <div class="card" user-card-main>
-      <div class="header" user-card-header></div>
-      <div class="body" user-card-body></div>
-    </div>
-  </template>
-  <template list-card>
-    <tr list-row>
-      <td list-header style="width:25%;"></td>
-      <td class="listTask" list-body style="width:75%;"></td>
-    </tr>
-  </template>
-  <table id="list" list-container>
+    <div class="body">
+        <div people-container class="people-container">
 
-  </table>
-  <script src="main.js"></script>
+        </div>
+        <div class="lineup-container">
+            <ul people-list class="people-list">
+
+            </ul>
+        </div>
+    </div>
+    <template people-card-template>
+        <div class="people-card hide">
+
+        </div>
+    </template>
 </body>
 </html>
